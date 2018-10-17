@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="VBoxMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TextEditorController">
+<children>
+    <MenuBar fx:id="MenuBarMain">
+        <menus>
+            <Menu fx:id="MenuFile" mnemonicParsing="false" text="Файл">
+                <items>
+                    <MenuItem fx:id="MenuItemNewDoc" mnemonicParsing="false" onAction="#createNewDoc" text="Новый" />
+                    <MenuItem fx:id="MenuItemOpen" mnemonicParsing="false" onAction="#openFile" text="Открыть..." />
+                    <MenuItem fx:id="MenuItemSave" mnemonicParsing="false" onAction="#save" text="Сохранить" />
+                    <MenuItem fx:id="MenuItemSaveAs" mnemonicParsing="false" onAction="#openSaveDialog" text="Сохранить как..." />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="MenuItemClose" mnemonicParsing="false" onAction="#closeDoc" text="Закрыть" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="MenuItemExit" mnemonicParsing="false" onAction="#exit" text="Выход" />
+                </items>
+            </Menu>
+            <Menu fx:id="MenuHelp" mnemonicParsing="false" text="Справка">
+                <items>
+                    <MenuItem fx:id="MenuItemAbout" mnemonicParsing="false" onAction="#about" text="О программе..." />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <TabPane fx:id="TabPaneMain" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS" />
+    <Label fx:id="LabelStatus" text="Добро пожаловать">
+        <font>
+            <Font name="Segoe UI" />
+        </font>
+    </Label>
+</children>
+</VBox>
